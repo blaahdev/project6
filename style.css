@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  transform-style: preserve-3d;
+  perspective: 40rem;
+}
+
+.menu-item {
+  background-color: aliceblue;
+  width: 10rem;
+  max-width: 20%;
+  aspect-ratio: 2/3;
+  display: grid;
+  place-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1.2s ease-in;
+}
+
+.menu-item i {
+  font-size: 3rem;
+}
+
+.menu-item:nth-child(1) {
+  transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem)
+    translateY(-15rem) translateZ(-20rem);
+  opacity: 0;
+}
+.menu-item:nth-child(2) {
+  transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem)
+    translateY(-15rem) translateZ(-20rem);
+  opacity: 0;
+}
+.menu-item:nth-child(3) {
+  transform: rotateX(45deg);
+}
+
+.menu-item:nth-child(4) {
+  transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem)
+    translateZ(-20rem);
+  opacity: 0;
+}
+.menu-item:nth-child(5) {
+  transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem)
+    translateZ(-20rem);
+  opacity: 0;
+}
+
+.menu.active .menu-item {
+  opacity: 1;
+  transform: rotateY(0) rotateX(0) translateX(0) translateY(0) translateZ(0);
+}
